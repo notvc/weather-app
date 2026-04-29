@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Weather App</title>
+</head>
+<body>
+    <nav>
+        <div class="navbar">
+            <a href="index.html">Weather App</a>
+            <button id="theme-btn" class="theme-btn" onclick="">
+                <i class="fa-solid fa-sun theme-icon sun-icon"></i>
+                <i class="fa-solid fa-moon theme-icon moon-icon" style="display: none;"></i>
+            </button>
+        </div>
+    </nav>
+    <section>
+        <div class="weather-container row">
+            <div class="search-container">
+                <input type="text" id="city-input" placeholder="Enter city name...">
+                <button id="search-btn" type="submit">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    </svg>
+                </button>
+            </div>
+            <div class="weather-icon">
+                <img src="./animated/weather.svg" alt="weather" height="100" width="100px">
+            </div>
+            <div id="weather-result" class="weather-result">
+                <div class="cityname weather-row">
+                    <h2>CITY NAME</h2>
+                    <p id="city-name">--</p>
+                </div>
+                <div class="temprature-info weather-row">
+                    <h2>TEMPRATURE</h2>
+                    <p id="temperature">--</p>
+                </div>
+                <div class="humidity-info weather-row">
+                    <h2>HUMIDITY</h2>
+                    <p id="humidity">--</p>
+                </div>
+                <div class="wind-speed weather-row">
+                    <h2>WIND SPEED</h2>
+                    <p id="wind-speed">--</p>
+                </div>
+            </div>
+        </div>
+    </section>
+<script src="script.js"></script>
+</body>
+</html>
