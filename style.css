@@ -18,14 +18,14 @@
 }
 @font-face {
     font-family: 'AbodeFont'; /* This is the name you'll use in your CSS */
-    src:  url('../fonts/abode-webfont/Abode-Light.woff') format('woff');/* Best for web */
+    src:  url('./fonts/abode-webfont/Abode-Light.woff') format('woff');/* Best for web */
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'AbodeFontBold';
-    src: url('../fonts/abode-webfont/abode.woff') format('woff');
+    src: url('./fonts/abode-webfont/abode.woff') format('woff');
     font-weight: bold;
     font-style: normal;
 }
@@ -35,15 +35,15 @@ body{
     background-size: cover;
     background-position: center;
     min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     /* justify-content: center; */
-    margin-top:100px;
-    background-attachment: fixed;
+    /* margin-top:100px; */
+    /* background-attachment: fixed; */
     transition: background 0.3s, color 0.3s;
 }
 .navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     width: 600px;
     background-color: var(--liquid-glass);
     border: 1px solid rgba(255, 255, 255, 0.3);
@@ -77,16 +77,21 @@ body{
   left: 0;
   right: 0;
 }
-.theme-btn{
+.location-id{
     background-color: var(--liquid-glass);
     border: 1px solid rgba(255, 255, 255, 0.3);
     padding: 10px;
-    border-radius: 50%;
+    border-radius: 15px;
+    color:var(--textcolor);
+    font-family: AbodeFont;
 }
 .fa-sun{
     color: var(--textcolor);
 }
 .weather-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     width: 800px;
     background-color: var(--liquid-glass);
     border: 1px solid rgba(255, 255, 255, 0.3);
@@ -96,11 +101,11 @@ body{
     align-items: center;
     box-shadow: var(--box-shadow);
     border-radius: var(--border-radius);
-    margin-top: 20px;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 2fr;
     gap: 20px;
     backdrop-filter: blur;
+    margin: 20px 200px 0px 200px;
 }
 .search-container {
     display: flex;
@@ -174,8 +179,12 @@ body{
     }
 }
 @media (max-width:480px){
-        .weather-result{
+    .weather-result{
         grid-template-columns: 1fr;
         display: block;
+    }
+    .navbar{
+        margin-left: 20px;
+        margin-right: 20px;
     }
 }
